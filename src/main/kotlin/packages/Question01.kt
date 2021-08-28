@@ -17,7 +17,7 @@ class Question1a (states: Set<String> = setOf("q0","q1","q2","q3"),
         else "erro"
 
     override fun getInfo(): String {
-        return "Todas as cadeias em {0,1}* que representam cada 1 seguido imediatamente de dois 0."
+        return "Question 1a: Todas as cadeias em {0,1}* que representam cada 1 seguido imediatamente de dois 0."
     }
 
     fun validation (word: CharArray): Boolean {
@@ -47,7 +47,7 @@ class Question1b (states: Set<String> = setOf("q0","q1","q2","q3"),
         else "erro"
 
     override fun getInfo(): String {
-        return "Todas as cadeias em {a,b}* de modo que o último símbolo seja b e o número de símbolos a seja par."
+        return "Question 1b: Todas as cadeias em {a,b}* de modo que o último símbolo seja b e o número de símbolos a seja par."
     }
 
     fun validation (word: CharArray): Boolean {

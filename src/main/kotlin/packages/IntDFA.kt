@@ -1,13 +1,13 @@
 package packages
 
-abstract class DFA(
+abstract class IntDFA(
     val states: Set<String>,
-    val alphabet: String,
+    val alphabet: Set<Int>,
     val initialState: String,
     val finalState: Set<String>,
 ){
-    abstract fun delta (state: String, input: Char) : String
+    abstract fun delta (state: String, input: Int) : String
     abstract fun getInfo(): String
     fun isFinalState(state: String) = finalState.contains(state)
-    fun contains(input: Char) = alphabet.contains(input)
+    fun contains(input: Int) = alphabet.contains(input)
 }

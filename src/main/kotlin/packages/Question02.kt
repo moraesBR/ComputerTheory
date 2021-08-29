@@ -4,7 +4,7 @@ abstract class Question02(states: Set<String>,
                           alphabet: String,
                           initialState: String,
                           finalState: Set<String>
-                         ) : DFA(states, alphabet, initialState, finalState) {
+                         ) : StringDFA(states, alphabet, initialState, finalState) {
     fun validation (word: CharArray): Boolean {
         var currentState = initialState
         for ( input in word ){

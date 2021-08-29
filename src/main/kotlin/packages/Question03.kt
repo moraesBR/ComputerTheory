@@ -8,7 +8,7 @@ class Question03(states: Set<String> = setOf("q0","q1","q2","q3","q4","q5","q6",
                  initialState: String = "q0",
                  finalState: Set<String> = setOf("q12"),
                  val stateBeginKeyword: String = "q2")
-    : DFA(states, alphabet, initialState, finalState){
+    : StringDFA(states, alphabet, initialState, finalState){
 
     override fun delta(state: String, input: Char): String = when(state){
         "q0" ->

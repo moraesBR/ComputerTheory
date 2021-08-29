@@ -8,6 +8,7 @@ fun main(){
     val question2c = Question2c()
     val question2d = Question2d()
     val question3 = Question03()
+    val question4 = Question04()
 
     val input1a = arrayListOf("0","0100","100","1","1001","010","0001")
     println("\n${question1a.getInfo()}")
@@ -40,4 +41,9 @@ fun main(){
             "microcomputador é também chamado computador pessoal ou ainda computador doméstico."
     println("\n${question3.getInfo()}")
     println(question3.findAll(text3))
+
+    val input4 = arrayListOf(100,25,25,25,25,100,50,50,100,100,25,50,25,50,25,25,100)
+    println("\n${question4.getInfo()}")
+    println("In: ${input4}")
+    println("Out: ${question4.validation(input4)}")
 }

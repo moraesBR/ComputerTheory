@@ -3,7 +3,7 @@ package packages
 class Question1a (states: Set<String> = setOf("q0","q1","q2","q3"),
                      alphabet: String = "01",
                      initialState: String = "q0",
-                     finalState: Set<String> = setOf("q0","q3")) : DFA(states, alphabet, initialState, finalState){
+                     finalState: Set<String> = setOf("q0","q3")) : StringDFA(states, alphabet, initialState, finalState){
     override fun delta(state: String, input: Char): String =
         if(alphabet.contains(input) && states.contains(state)){
             when(state){
@@ -33,7 +33,7 @@ class Question1a (states: Set<String> = setOf("q0","q1","q2","q3"),
 class Question1b (states: Set<String> = setOf("q0","q1","q2","q3"),
                      alphabet: String = "ab",
                      initialState: String = "q0",
-                     finalState: Set<String> = setOf("q0","q3")) : DFA(states, alphabet, initialState, finalState){
+                     finalState: Set<String> = setOf("q0","q3")) : StringDFA(states, alphabet, initialState, finalState){
     override fun delta(state: String, input: Char): String =
         if(alphabet.contains(input) && states.contains(state)){
             when(state){
